@@ -14,18 +14,18 @@ const server = http.createServer(app);
 // })
 //const io = require("socket.io").listen(server);
 const io = socketio(server).sockets;
-app.use(express.json());    
+//app.use(express.json());    
 //** Peer Server */
-const customGenerationFunction = () =>
-  (Math.random().toString(36) + "0000000000000000000").substr(2, 16);
+//const customGenerationFunction = () =>
+  //(Math.random().toString(36) + "0000000000000000000").substr(2, 16);
 
-const peerServer = ExpressPeerServer(server, {
-  debug: true,
-  path: "/",
-  generateClientId: customGenerationFunction,
-});
+//const peerServer = ExpressPeerServer(server, {
+ // debug: true,
+ // path: "/",
+ // generateClientId: customGenerationFunction,
+//});
 
-app.use("/mypeer", peerServer);
+//app.use("/mypeer", peerServer);
 
 //** Config */
 
